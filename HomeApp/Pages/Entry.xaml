@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HomeApp.Pages.Entry">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Entry Text="Your e-mail"></Entry>
+        <Button x:Name="buttonName" Text="REGISTER"></Button>
+        <Label Text="Alredy have an account"></Label>
+    </StackLayout>
+</ContentPage>

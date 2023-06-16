@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomeApp.Pages;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace HomeApp
         {
             InitializeComponent();
 
-            MainPage = new SpanPage();
+            MainPage = new NewDevicePage();
         }
 
         protected override void OnStart()
