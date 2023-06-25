@@ -1,5 +1,6 @@
 ﻿using HomeApp.Pages;
 using System;
+using System.Text.RegularExpressions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace HomeApp
         {
             InitializeComponent();
 
-            MainPage = new NewDevicePage();
+            MainPage = new RegisterPage();
         }
 
         protected override void OnStart()
