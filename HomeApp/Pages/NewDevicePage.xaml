@@ -4,8 +4,7 @@
             xmlns:local="clr-namespace:HomeApp.Pages"
             x:Class="HomeApp.Pages.NewDevicePage"
             >
-
-    <StackLayout x:Name="stackLayout" BackgroundColor="LightGray">
+    <StackLayout x:Name="stackLayout" BackgroundColor="LightGray" StyleId ="header">
         <Label Text="HomeApp - Новое устройство" HorizontalOptions="Center"  FontSize="Title" Padding="30,10,30,10" />
     </StackLayout>
 </ContentPage>

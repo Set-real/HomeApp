@@ -23,22 +23,22 @@ namespace HomeApp.Pages
             // В реальном приложении они могут доставаться из базы или веб-сервиса.
             var homeDevices = new List<HomeDevice>();
 
-            // Заполняем список устройств
-            homeDevices.Add(new HomeDevice("Чайник", "kettle.jpeg"));
-            homeDevices.Add(new HomeDevice("Стиральная машина"));
-            homeDevices.Add(new HomeDevice("Посудомоечная машина"));
-            homeDevices.Add(new HomeDevice("Мультиварка"));
-            homeDevices.Add(new HomeDevice("Водонагреватель"));
-            homeDevices.Add(new HomeDevice("Плита"));
-            homeDevices.Add(new HomeDevice("Микроволновая печь"));
-            homeDevices.Add(new HomeDevice("Духовой шкаф"));
-            homeDevices.Add(new HomeDevice("Холодильник"));
-            homeDevices.Add(new HomeDevice("Увлажнитель воздуха"));
-            homeDevices.Add(new HomeDevice("Телевизор"));
-            homeDevices.Add(new HomeDevice("Пылесос"));
-            homeDevices.Add(new HomeDevice("музыкальный центр"));
-            homeDevices.Add(new HomeDevice("Компьютер"));
-            homeDevices.Add(new HomeDevice("Игровая консоль"));
+            //// Заполняем список устройств
+            //homeDevices.Add(new HomeDevice("Чайник", "kettle.jpeg"));
+            //homeDevices.Add(new HomeDevice("Стиральная машина"));
+            //homeDevices.Add(new HomeDevice("Посудомоечная машина"));
+            //homeDevices.Add(new HomeDevice("Мультиварка"));
+            //homeDevices.Add(new HomeDevice("Водонагреватель"));
+            //homeDevices.Add(new HomeDevice("Плита"));
+            //homeDevices.Add(new HomeDevice("Микроволновая печь"));
+            //homeDevices.Add(new HomeDevice("Духовой шкаф"));
+            //homeDevices.Add(new HomeDevice("Холодильник"));
+            //homeDevices.Add(new HomeDevice("Увлажнитель воздуха"));
+            //homeDevices.Add(new HomeDevice("Телевизор"));
+            //homeDevices.Add(new HomeDevice("Пылесос"));
+            //homeDevices.Add(new HomeDevice("музыкальный центр"));
+            //homeDevices.Add(new HomeDevice("Компьютер"));
+            //homeDevices.Add(new HomeDevice("Игровая консоль"));
 
             var innerStack = new StackLayout();
 
@@ -74,10 +74,10 @@ namespace HomeApp.Pages
         /// <summary>
         /// Показ изображения по нажатию
         /// </summary>
-        public async Task ShowImage(object sender, EventArgs e, string imageName)
+        public Task ShowImage(object sender, EventArgs e, string imageName)
         {
             // Если изображение отсутствует
-            if (String.IsNullOrEmpty(imageName))
+            if (string.IsNullOrEmpty(imageName))
             {
                 //await DisplayAlert("", "Изображение устройства отсутствует", "OK");
 
@@ -92,13 +92,14 @@ namespace HomeApp.Pages
 
                 // Инициализируем страницу
                 Content = img;
-                return;
+                return Task.CompletedTask;
             }
 
             // При наличии изображения - загружаем его по заданному пути
             Image image = new Image();
             image.Source = ImageSource.FromResource($"HomeApp.Images.{imageName}");
             Content = image;
+            return Task.CompletedTask;
         }
     }
 }
